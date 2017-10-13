@@ -6,3 +6,7 @@ class Person {
         this.age = age;
     }
 }
+
+let a: any = 'abcd';
+
+console.log((<string> a).length);

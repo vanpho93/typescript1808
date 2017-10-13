@@ -5,3 +5,5 @@ class Person {
         this.age = age;
     }
 }
+let a = 'abcd';
+console.log(a.length);
