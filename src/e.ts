@@ -1,6 +1,25 @@
-interface Point {
-    x: number;
-    y: number;
+interface HasName {
+    name: string;
 }
 
-let obj: Point = { x: 10, y: 10 };
+class Animal implements HasName {
+    private _age: number;
+    name: string;
+    constructor(name: string, age: number) {
+        this.name = name;
+        this._age = age;
+    }
+
+    get age() {
+        return this._age;
+    }
+}
+
+function callSomething(obj: HasName) {
+    console.log('This is ' + obj.name)
+}
+
+const conBo = new Animal('Cow', 10);
+callSomething(conBo);
+conBo.name = 'Beef';
+console.log(conBo.age);
